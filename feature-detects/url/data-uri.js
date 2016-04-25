@@ -69,10 +69,11 @@ define(['Modernizr', 'addTest'], function(Modernizr, addTest) {
         Modernizr.datauri.over32kb = (datauriBig.width == 1 && datauriBig.height == 1);
       };
 
-      var base64str = 'R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
-      while (base64str.length < 33000) {
-        base64str = '\r\n' + base64str;
+      var base64str = 'R0lGODlh9AHwAIAAAAAAAP///ywAAAAA9AHwAA';
+      for (var i = 0; i < 40000; i++) {
+        base64str += 'ABAAEAAQ';
       }
+      base64str += 'AAOw==';
       datauriBig.src = 'data:image/gif;base64,' + base64str;
     }
 
