@@ -1,0 +1,6 @@
+{
+  "feature-detects": [
+    "test/cookies",
+    "test/cookies-3rdparty"
+  ]
+}
